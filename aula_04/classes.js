@@ -1,48 +1,66 @@
-// É boa pratica sempre utilizar a primeira letra do nome da classe MAIUSCULA
+/**
+ * É boa prática sempre utilizar a primeira letra do nome da classe em maiúscula.
+ */
 class Person {
-    // Contructor é um metodo que recebe N parametros para a contrucao da classe, e ele é sempre executado na instancia da classe.
-    constructor(name, cpf, age) {
+  /**
+   * Constructor é um método especial que recebe N parâmetros para a construção da classe.
+   * Ele é sempre executado na instância da classe.
+   */
+  constructor(name, cpf, age) {
+    // THIS representa a instância atual da classe.
+    this.name = name;
+    this.cpf = cpf;
+    this.age = age;
+  }
 
-        // THIS representa tudo o que voce tem dentro do escopo em que voce esta.
-        this.name = name
-        this.cpf = cpf
-        this.age = age
-    }
-
-    // Este aqui é um metodo criado DENTRO da classe, e pode ser acessado somente invocando a instancia da classe
-    sayHello() {
-        console.log(`Hello, ${this.name}!`)
-    }
+  /**
+   * Este é um método criado dentro da classe, e pode ser acessado somente invocando a instância da classe.
+   */
+  sayHello() {
+    console.log(`Hello, ${this.name}!`);
+  }
 }
 
+// Criação de instâncias da classe Person.
+const person = new Person('Paulo', '99999999999', 23);
+const personTwo = new Person('Renata', '12345678900', 23);
 
-const person = new Person('Paulo', '99999999999', 23)
-const personTwo = new Person('Renata', 'CPF', 23)
+// Invocação do método sayHello para cada instância.
+person.sayHello();
+// Note que estamos utilizando o mesmo método, porém o resultado será diferente, pois são instâncias e dados diferentes.
+personTwo.sayHello();
 
-person.sayHello()
-// Note que estamos utilizando o mesmo metodo, porem o resultado sera diferente, pois sao instancias e dados diferentes.
-personTwo.sayHello()
-
-
-// Extends - E utilizado para extender tudo de uma outra classe
-
+/**
+ * Extends é utilizado para herdar propriedades e métodos de outra classe.
+ */
 class Animal {
-    constructor(name){
-        this.name = name
-    }
+  constructor(name) {
+    this.name = name;
+  }
 
-    say() {
-        console.log(`${this.name} say something ...`)
-    }
+  /**
+   * Método que simula um som feito pelo animal.
+   */
+  say() {
+    console.log(`${this.name} says something ...`);
+  }
 }
 
+/**
+ * Classe Dog herda de Animal.
+ */
 class Dog extends Animal {
-    bark() {
-        console.log(`${this.name} barked!`)
-    }
+  /**
+   * Método específico da classe Dog.
+   */
+  bark() {
+    console.log(`${this.name} barked!`);
+  }
 }
 
-const dog = new Dog('Hulk')
+// Criação de uma instância da classe Dog.
+const dog = new Dog('Hulk');
 
-dog.say()
-dog.bark()
+// Invocação de métodos da classe Dog e da classe pai (Animal).
+dog.say();
+dog.bark();
