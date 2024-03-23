@@ -1,43 +1,40 @@
-// Funções sao partes de códigos que fazem alguma coisa especifica
+// Funções são partes de códigos que executam uma tarefa específica.
 
-// Funções Declarativas - Sao funcoes que sao declaradas
-// function [NOME_DA_FUNCAO]([PARAMETROS_OPCIONAIS]) {}
+// Funções Declarativas - São funções que são declaradas usando a palavra-chave 'function'.
 function greetings(name) {
   return "Hello, " + name + "!";
 }
 
-// Funções Arrow  - utilizam da Arrow (=>) para ser construida a funcao.
-// () => {}
-// Armazenadas em constantes ou sao paramentros de outras funcoes (calbacks)
+// Funções Arrow - Utilizam a sintaxe de seta (=>) para a declaração da função.
+const arrowGreeting = (name) => {
+  return "Hello, " + name + "!";
+};
 
-(name) => { return "Hello, " + name + "!"; };
+// Funções Anônimas - São funções que não têm um nome. Geralmente são usadas como argumentos de outras funções (callbacks) ou armazenadas em variáveis.
+const anonymousGreeting = function(name) {
+  return "Hello, " + name + "!";
+};
 
-// Funções anonimas - Elas nao utilizam o verbo function, e nao tem nome.
-// () => {}
-// Armazenadas em constantes ou sao paramentros de outras funcoes (calbacks)
-
-(name) => { return "Hello, " + name + "!"; };
-const otherAnnonimousFunction = function(name) { return "Hello, " + name + "!"; };
-
-// Funções Expressivas - Sao funcoes definidas como parte de uma expressao. Elas podem ser anonimas
+// Funções Expressivas - São funções definidas como parte de uma expressão. Podem ser anônimas ou nomeadas.
 const sum = (a, b) => {
-    return a+b
-}
-const isGreaterThan = function(actual, condiction) {
-    return actual > condiction
-}
+  return a + b;
+};
 
-// Funções Assincronas - Sao funcoes que demantam uma espera de tempo para ser completamente executadas
+const isGreaterThan = function(actual, condition) {
+  return actual > condition;
+};
+
+// Funções Assíncronas - São funções que aguardam a conclusão de uma operação assíncrona.
 async function carregarDados() {
-    // Buscar dados seria uma funcao que demanda uma espera do resultado
-    let dados = await buscarDados()
-    console.log(dados)
+  // Supondo que 'buscarDados' seja uma função que retorna uma promessa (Promise).
+  let dados = await buscarDados();
+  console.log(dados);
 }
 
-// Funções Construtoras - Sao funcoes que constroem um tipo de dado [Semelhantes as classes]
+// Funções Construtoras - São funções usadas para construir objetos. Semelhantes a classes em outros idiomas.
 function Person(name, age) {
-    this.name = name;
-    this.age = age
+  this.name = name;
+  this.age = age;
 }
 
-const paulo = new Person("Paulo", 23)
+const paulo = new Person("Paulo", 23);
