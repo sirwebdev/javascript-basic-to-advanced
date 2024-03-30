@@ -1,0 +1,78 @@
+/* Aplica estilos gerais a todos os elementos */
+* {
+    box-sizing: border-box; /* Define como a largura e altura dos elementos são calculadas */
+    margin: 0; /* Remove a margem padrão dos elementos */
+}
+
+/* Estiliza o corpo da página */
+body {
+    display: flex; /* Usa Flexbox para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    height: 100vh; /* Altura total da janela de visualização */
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+}
+
+/* Estiliza a div da calculadora */
+.calculator {
+    width: 400px; /* Largura fixa */
+    background-color: #fff; /* Cor de fundo branca */
+    padding: 30px; /* Espaçamento interno */
+    border-radius: 5px; /* Bordas arredondadas */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+/* Estiliza o campo de exibição da calculadora */
+#display {
+    width: 100%; /* Largura total */
+    padding: 25px; /* Espaçamento interno */
+    margin-bottom: 20px; /* Margem abaixo do display */
+    border: 2px solid #ccc; /* Borda cinza */
+    border-radius: 5px; /* Bordas arredondadas */
+    text-align: right; /* Alinha o texto à direita */
+    font-size: 2rem; /* Tamanho da fonte */
+}
+
+/* Estiliza o grid de botões da calculadora */
+.buttons {
+    display: grid; /* Usa Grid Layout */
+    grid-template-columns: repeat(4, 1fr); /* Quatro colunas de tamanho igual */
+    gap: 10px; /* Espaço entre os botões */
+}
+
+/* Estiliza os botões da calculadora */
+.btn {
+    padding: 20px; /* Espaçamento interno */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #f0f0f0; /* Cor de fundo cinza claro */
+    cursor: pointer; /* Muda o cursor para indicar que é clicável */
+    transition: background-color 0.2s; /* Transição suave da cor de fundo */
+    font-size: 2rem; /* Tamanho da fonte */
+}
+
+/* Altera a cor de fundo do botão ao passar o mouse */
+.btn:hover {
+    background-color: #e0e0e0; /* Cor de fundo mais escura */
+}
+
+/* Altera a cor de fundo do botão ao clicar */
+.btn:active {
+    background-color: #f0f0f0; /* Cor de fundo original */
+}
+
+/* Estiliza o botão de limpar (C) */
+.btn[data-value="C"] {
+    background-color: #ff6666; /* Cor de fundo vermelha */
+    color: #fff; /* Cor do texto branca */
+}
+
+/* Altera a cor de fundo do botão de limpar ao passar o mouse */
+.btn[data-value="C"]:hover {
+    background-color: #ff4d4d; /* Cor de fundo vermelha mais escura */
+}
+
+/* Mantém a cor de fundo do botão de limpar ao clicar */
+.btn[data-value="C"]:active {
+    background-color: #ff6666; /* Cor de fundo vermelha */
+}
