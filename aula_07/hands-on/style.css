@@ -1,0 +1,69 @@
+/* Aplica estilos gerais a todos os elementos */
+* {
+    box-sizing: border-box; /* Define como a largura e altura dos elementos são calculadas */
+    margin: 0; /* Remove a margem padrão dos elementos */
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f7f7f7;
+    font-family: 'Arial', sans-serif;
+}
+
+.todo-container {
+    width: 350px;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+#taskInput {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+#addTaskBtn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#addTaskBtn:hover {
+    background-color: #0056b3;
+}
+
+#taskList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#taskList li {
+    padding: 10px;
+    margin-bottom: 5px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
