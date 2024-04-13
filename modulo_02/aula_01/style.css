@@ -1,0 +1,60 @@
+/* Redefine a margem e o padding padrão para todos os elementos HTML */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Define a cor do texto para elementos <p> */
+p {
+  color: blue;
+}
+
+/* Define a cor do texto para elementos <strong> */
+strong {
+  color: red;
+}
+
+/* Estilos para elementos com a classe 'destaque' */
+.destaque {
+  font-size: 1rem;  /* Define o tamanho da fonte */
+  color: purple;    /* Define a cor do texto */
+}
+
+/* Estilos para o elemento com o ID 'titulo-principal' */
+#titulo-principal {
+  font-size: 1.5rem;   /* Define o tamanho da fonte */
+  font-weight: bold;   /* Torna a fonte negrito */
+  color: lavender;     /* Define a cor do texto */
+}
+
+/* Prioridade no CSS: Seletor de ID > Seletor Mais Específico > Seletor de Classe > Seletor de Tag */
+
+/* Selecionando elementos filhos: Usa ">" para selecionar filhos diretos */
+body > div > img {
+  width: 150px;       /* Define a largura */
+  height: 150px;      /* Define a altura */
+  border-radius: 50%; /* Arredonda os cantos para um círculo */
+}
+
+/* Ajusta o border-radius para imagens dentro do ID 'container' */
+#container > img {
+  border-radius: 25%; /* Arredonda levemente os cantos */
+}
+
+/* Seletor de irmãos adjacentes: Usa "+" para aplicar estilos a elementos imediatamente após uma imagem */
+img + a {
+  border: 1px solid blue; /* Adiciona uma borda azul */
+}
+
+/* Seletor de múltiplos elementos: Usa "," para aplicar estilos a ambos elementos */
+strong, a {
+  font-size: 0.25rem;        /* Define o tamanho da fonte */
+  font-family: sans-serif;   /* Altera a família da fonte */
+}
+
+/* Estilos gerais para todos os elementos <img> */
+img {
+  border: 1px solid red; /* Adiciona uma borda vermelha */
+  padding: 20px;         /* Adiciona padding ao redor da imagem */
+}
+
