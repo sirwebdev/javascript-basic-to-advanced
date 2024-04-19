@@ -1,0 +1,66 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html, body, main {
+    width: 100vw;
+    height: 100vh;
+}
+
+main, button, a {
+    font-size: xx-large;
+}
+
+main {
+    background-color: #0b0e1b;
+
+    color: white;
+}
+
+main > header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 1rem;
+    padding: 1rem;
+}
+
+header > aside, header > aside> ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+ul > li > a, aside > button {
+    cursor: pointer;
+}
+
+ul > li > a {
+    color: white;
+    text-decoration: none;
+}
+
+header > aside > ul {
+    list-style: none;
+
+    gap: .75rem;
+}
+
+header > aside {
+    gap: 1rem;
+
+    width: 40%;
+    min-width: max-content;
+}
+
+main > header > aside > button {
+    background-color: #a6f636;
+    color: black;
+
+    padding: 1rem 2rem;
+    border: 0;
+}

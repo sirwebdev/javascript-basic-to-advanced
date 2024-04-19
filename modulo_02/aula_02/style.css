@@ -1,0 +1,62 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100vw;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-between;
+  align-items: center;
+
+  background-color: purple;
+  padding: .5rem;
+
+  height: 100%;
+}
+
+#item1, #item2, #item3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 40px;
+  height: 40px;
+
+  background-color: orange;
+  color: white;
+
+  border-radius: 10px;
+}
+
+
+.grow1 {
+  flex-grow: 1;
+}
+
+.grow2 {
+  flex-grow: 2;
+}
+
+.grow3 {
+  flex-grow: 3;
+}
+
+.shrink1 {
+  flex-shrink: 1;
+}
+
+.shrink2 {
+  flex-shrink: 0;
+}
+
+.shrink3 {
+  flex-shrink: 1;
+}
