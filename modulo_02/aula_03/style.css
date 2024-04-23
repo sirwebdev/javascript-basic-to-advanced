@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 200px 1fr 200px; /* Três colunas com tamanhos fixo, flexível, fixo */
+    grid-template-rows: auto 50px 1fr 150px auto; /* Alturas diversas para cabeçalho, navbar, conteúdo principal, conteúdo extra e rodapé */
+    grid-template-areas:
+        "header header header"
+        "navbar navbar navbar"
+        "sidebar main extra"
+        "footer footer footer";
+    grid-gap: 10px; /* Espaço entre as células */
+    height: 100vh;
+}
+
+.header {
+    grid-area: header;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-right: 1px solid #ccc;
+}
+
+.main-content {
+    grid-area: main;
+    padding: 10px;
+    background-color: #fff;
+}
+
+.extra-content {
+    grid-area: extra;
+    background-color: #e7e7e7;
+    padding: 10px;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Ajustes adicionais para alinhamento */
+.header, .footer {
+    justify-content: center;
+    align-items: center;
+}
