@@ -69,10 +69,28 @@ Node.js é essencial para o desenvolvimento moderno de front-end, especialmente 
 - **Create React App**: Configura rapidamente um novo ambiente de desenvolvimento React.
 
 ```bash
-# Criar a estrutura de pasta e instala TODOS os pacotes do NPM e fornece o React ja configurado.
 npx create-react-app my-app
 cd my-app
 npm start
+```
+
+## Estrutura Simplificada do Projeto
+
+```plaintext
+node_modules                # Diretório de dependências do projeto
+public
+  └ index.html              # Página HTML principal do projeto
+src
+  └ components              # Componentes personalizados
+     └ greetings
+        └ index.js          # Componente específico para saudações
+  └ App.js                  # Componente principal da aplicação
+  └ index.css               # Estilo global da aplicação
+  └ index.js                # Ponto de entrada do JavaScript
+.gitignore                  # Especifica arquivos não rastreados pelo Git
+README.md                   # Documentação do projeto
+package-lock.json           # Bloqueia versões de pacotes
+package.json                # Metadados e configurações do projeto
 ```
 
 ## Empresas que Usam React
