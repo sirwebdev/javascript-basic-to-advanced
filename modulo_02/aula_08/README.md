@@ -42,7 +42,7 @@ git branch new-feature
 git checkout new-feature
 git add .
 git commit -m "Add new feature"
-git checkout master
+git checkout main 
 git merge new-feature
 ```
 
